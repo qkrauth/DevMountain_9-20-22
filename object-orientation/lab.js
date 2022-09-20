@@ -5,8 +5,10 @@
 */
 
 //Code here
-
-
+let me = {
+  name: "Quinten",
+  age: 23,
+}
 
 //////////////////////////// PROBLEM 2 ////////////////////////////
 
@@ -16,21 +18,26 @@
 //and goodBoy/goodGirl (a boolean).
 
 //Code here
-
+let dog = {
+  name: "Bosco",
+  color: "Black",
+  age: 5,
+  goodboy: true,
+}
 
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
 //Code here
-
+console.log(dog.name);
 
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
 //Code here
-
+console.log(dog["age"]);
 
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
@@ -40,6 +47,14 @@
 */
 
 //Code here
+let favoriteThings = {
+  band: "Drake",
+  food: "Pasta",
+  person: "Family",
+  book: "Harry Potter",
+  movie: "Forrest Gump",
+  holiday: "Christmas",
+}
 
 
 /*
@@ -47,6 +62,9 @@
 */
 
 //Code here
+favoriteThings.car = "Tesla";
+favoriteThings["show"] = "Breaking Bad";
+console.log(favoriteThings);
 
 
 /*
@@ -55,6 +73,11 @@
 */
 
 //Code here
+let updateFavoriteThings = (favorite, property, update) => {
+  favoriteThings[property] = update;
+}
+updateFavoriteThings(favoriteThings, "food", "Chicken Nuggets");
+console.log(favoriteThings);
 
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
@@ -73,6 +96,8 @@ var carDetails = {
 */
 
 //Code Here
+let {color, make, model, year} = carDetails;
+console.log(`${color}`);
 
 
 
@@ -84,13 +109,21 @@ var carDetails = {
   The property names are firstName, lastName, and title.
 */
 
-function greeting( obj ) {
+function greeting(personObj) {
   //Code Here
-  
+  let {title, firstName, lastName} = personObj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
+
+let quinten = {
+  firstName: "Quinten",
+  lastName: "Krauth",
+  title: "Sir"
+}
+
+console.log(greeting(quinten));
 
 
 
@@ -105,6 +138,18 @@ function greeting( obj ) {
 */
 
 //Code Here
+function totalPopulation(states) {
+  let {utah, cali, texas, arizona} = states
+  return utah + cali + texas + arizona;
+}
+
+let states = {
+  utah: 4000000,
+  cali: 39000000,
+  texas: 28000000,
+  arizona: 7000000,
+}
+console.log(totalPopulation(states));
 
 
 
@@ -120,10 +165,23 @@ function greeting( obj ) {
 
 //Code Here
 
+function ingredients(nutrition) {
+  let {carb, fat, protein} = nutrition
+  return [carb, fat, protein];
+}
+
+let aminos = {
+  carb: "energy",
+  fat: "storage",
+  protein: "muscle",
+}
+
+console.log(ingredients(aminos));
+
 
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
-// Do not edit the code below.
+//Do not edit the code below.
 var user = {
   name: 'Bryan',
   age: 24,
@@ -132,7 +190,7 @@ var user = {
   birthday: '05/02/1990',
   username: 'bryansmith33'
 };
-// Do not edit the code above.
+//Do not edit the code above.
 
 /*
   Let's say I, the user, decided to change my name and email address to the following:
@@ -141,6 +199,9 @@ var user = {
 */
 
 //Code Here
+user.name = "Bryan G. Smith";
+user["email"] = "bryan.smith@devmountain";
+console.log(user);
 
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
@@ -149,6 +210,8 @@ var user = {
 */
 
 //Code Here
+delete user["age"];
+console.log(user);
 
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
@@ -159,7 +222,16 @@ var user = {
 */
 
 //Code here
+class Cat {
+  constructor(name, age, color) {
+    this.name = name;
+    this.age = age;
+    this.color = color;
+  }
+}
 
+let Kitten = new Cat("Noisy", 5, "multi")
+console.log(Kitten.name);
 
 
 //////////////////////////// PROBLEM 13 ////////////////////////////

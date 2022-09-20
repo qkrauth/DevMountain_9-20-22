@@ -40,3 +40,16 @@ console.log(pikachu["name"]);
 // add or reassign values too 
 pikachu["suprised"] = ":O";
 console.log(pikachu);
+
+
+
+// SCALE THE ARRAY - given an array arr and a number num, multiply all values in the array arr by the number num and and return
+// the changed array arr. for example scaleArray([1,2,3], 3) should return [3,6,9]
+
+function scale_array(arr, num) {
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i] * num;
+    }
+    return arr;
+}
+console.log(scale_array([1, 2, 3], 3));
